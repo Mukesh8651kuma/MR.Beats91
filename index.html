@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><MR.Beats91"></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black-900 text-white font-sans">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-blue-800 shadow-md">
+    <!-- Logo and Name -->
+    <div class="flex items-center">
+      <img src="logo.jpg" alt="Logo" class="h-20 w-15 mr-3" />
+      <span class="text-3xl font-bold">MR.Beats91</span>
+    </div>
+  </header>
+  <!-- Social Icons on Right Side -->
+  <div class="flex space-x-6 items-center">
+    <a href="https://youtube.com/@mr.beats1k?si=ANYccM1CgK4sV1rP" target="_blank" title="YouTube">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="h-8 w-8 hover:scale-110 transition duration-200" />
+    </a>
+    <a href="https://t.me/SGaming1k" target="_blank" title="Telegram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="h-8 w-8 hover:scale-110 transition duration-200" />
+    </a> 
+  </div>
+</header>
+<!-- Hamburger Menu -->
+<div class="hamburger-menu">
+  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  <div id="menu" class="menu">
+      <ul>
+          <li><a href="#" onclick="showGames()">Games</a></li>
+      </ul>
+  </div>
+</div>
+
+<!-- Games Section -->
+<div id="games-section" class="section">
+  <h2>Game Options</h2>
+
+  <!-- Indian Thief Auto Simulator 3D -->
+  <h3>Indian Thief Auto Simulator 3D – Desi Style Open World Masti!</h3>
+  <p>Tayyar ho jao ek dum desi open world adventure ke liye! Indian Thief Auto Simulator 3D ek aisa game hai jahan aap kar sakte ho jo chaaho woh! Car, bike, truck ya tractor – chalao kuch bhi, uda do gaadi ko hawa mein ya ghoomo poore sheher mein bina kisi rule ke!</p>
+  <ul>
+      <li>Realistic Indian roads aur traffic</li>
+      <li>Desi vehicles ka full collection – auto rickshaw se leke superbike tak</li>
+      <li>Smooth controls aur masti bhare stunts</li>
+      <li>Free roam mode jahan koi tension nahi – sirf full time fun!</li>
+      <li>High quality graphics aur entertaining sound effects</li>
+  </ul>
+  <p>Yeh koi typical mission-based game nahi hai – yeh hai ek mast timepass simulator jahan aap ban jaate ho hero apni hi duniya ke!</p>
+  <!-- Image Section for Indian Thief Auto -->
+  <img src="ita.jpg" alt="Indian Thief Auto Simulator 3D" class="game-image">
+  <a href="https://play.google.com/store/apps/details?id=com.indian.openworld" target="_blank" class="download-link">Download Indian Thief Auto Simulator 3D</a>
+
+  <!-- Indian Bike Driving 3D -->
+  <h3>Indian Bike Driving 3D</h3>
+  <p>Welcome to the ultimate open-world adventure! Indian Bike Driving 3D brings you a thrilling mix of bikes, cars, helicopters, and even superpowers — all in one crazy and entertaining game!</p>
+  <ul>
+      <li>Huge open-world map to explore</li>
+      <li>Desi-style bikes, cars, and helicopters</li>
+      <li>Hilarious ragdoll effects and unique character animations</li>
+      <li>Superpowers, weapons, and unlimited fun</li>
+      <li>Easy controls and addictive gameplay</li>
+  </ul>
+  <p>Whether you're riding through the city streets or flying high above the buildings, Indian Bike Driving 3D offers non-stop masti and adventure!</p>
+  <!-- Image Section for Indian Bike Driving -->
+  <img src="ind.jpg" alt="Indian Bike Driving 3D" class="game-image">
+  <a href="https://play.google.com/store/apps/details?id=com.Rohit.IndianBikes" target="_blank" class="download-link">Download Indian Bike Driving 3D</a>
+</div>
+
+<style>
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+  }
+
+  /* Hamburger Menu */
+  .hamburger-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+  }
+
+  .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+  }
+
+  /* Menu Styles */
+  .menu {
+      display: none;
+      background-color: #333;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 200px;
+      padding: 10px;
+  }
+
+  .menu ul {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .menu ul li {
+      margin: 10px 0;
+  }
+
+  .menu ul li a {
+      color: white;
+      text-decoration: none;
+  }
+
+  /* Games Section */
+  .section {
+      display: none;
+      padding: 20px;
+      background-color: #222;
+      margin-top: 70px;
+  }
+
+  .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+
+  .section h3 {
+      font-size: 22px;
+      margin-top: 20px;
+  }
+
+  .section ul {
+      margin-top: 10px;
+  }
+
+  .section ul li {
+      margin: 5px 0;
+  }
+
+  .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #FF9800;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+
+  .download-link:hover {
+      background-color: #FF5722;
+  }
+
+  /* Image Styling */
+  .game-image {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      border-radius: 10px;
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "block" ? "none" : "block");
+  }
+
+  function showGames() {
+      var gamesSection = document.getElementById("games-section");
+      gamesSection.style.display = "block"; // Show game options
+  }
+</script>
+
+
+  <!-- Niche Content / Intro -->
+<section class="px-6 py-10 text-center bg-yellow-700">
+  <h2 class="text-3xl font-bold mb-4">Welcome to My Gaming Website</h2>
+  <p class="text-lg mb-2">Yeh ek gaming ke bare me hai new updates and new cheatscode.and subcribe my youtube channel MR.Beats91</p>
+  <p class="text-lg font-medium text-green-400">In this website, we provide you new new cheat codes for Indian Bike Driving 3D and other games.</p>
+</section>
+
+
+  <!-- Image Gallery Section -->
+  <section class="px-6 py-10">
+    <h3 class="text-2xl font-semibold mb-4 text-center">Our Images</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex justify-center">
+        <img src="ibd.jpg" alt="Image 1" class="rounded-xl shadow-lg w-full max-w-xs" />
+      </div>
+      <div class="flex justify-center">
+        <img src="game.jpg" alt="Image 2" class="rounded-xl shadow-lg w-full max-w-xs" />
+      </div>
+      <div class="flex justify-center">
+        <img src="cow.jpg" alt="Image 3" class="rounded-xl shadow-lg w-full max-w-xs" />
+      </div>
+      <div class="flex justify-center">
+        <img src="ted.jpg" alt="Image 4" class="rounded-xl shadow-lg w-full max-w-xs" />
+      </div>
+    </div>
+  </section>
+
+ <!-- Video Section -->
+<section class="px-6 py-10 bg-yellow-800">
+  <h3 class="text-2xl font-semibold mb-4 text-center">Watch Our Video</h3>
+  <div class="flex justify-center">
+    <iframe class="w-full max-w-xl aspect-video rounded-xl shadow-lg"
+      src="https://www.youtube.com/embed/NmUZ1tYbHF0?rel=0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- Description Section (New Font with Color) -->
+<section class="px-6 py-10 bg-black shade-700">
+  <h2 class="text-3xl font-bold mb-4 text-center text-red-500">Indian Bike Driving 3D</h2>
+  <p class="text-lg mb-2 text-center">Welcome to the ultimate open-world adventure! Indian Bike Driving 3D brings you a thrilling mix of bikes, cars, helicopters, and even superpowers — all in one crazy and entertaining game!</p>
+  <ul class="list-disc text-lg text-center space-y-2">
+    <li>Huge open-world map to explore</li>
+    <li>Desi-style bikes, cars, and helicopters</li>
+    <li>Hilarious ragdoll effects and unique character animations</li>
+    <li>Superpowers, weapons, and unlimited fun</li>
+    <li>Easy controls and addictive gameplay</li>
+  </ul>
+  <p class="text-lg text-center">Whether you're riding through the city streets or flying high above the buildings, Indian Bike Driving 3D offers non-stop masti and adventure!</p>
+</section>
+
+  <!-- Cheat Codes Section -->
+  <section class="px-6 py-10 bg-gray-700">
+    <h3 class="text-2xl font-semibold mb-4 text-center">Indian Bike Driving 3D Cheat Codes</h3>
+    <div class="space-y-4">
+      <div class="bg-gray-800 p-4 rounded-lg">
+        <h5 class="text-xl font-semibold">Active Codes</h5>
+        <p class="text-lg">5599 - Bus</p>
+        <p class="text-lg">101 - Police SUV</p>
+        <p class="text-lg">0002 - Defender</p>
+        <p class="text-lg">6 - Buffalo</p>
+        <p class="text-lg">10 - Elephant</p>
+        <p class="text-lg">6666 - G-Wagon</p>
+        <p class="text-lg">5643 - Tractor</p>
+        <p class="text-lg">3005 - GTR</p>
+        <p class="text-lg">8370 - Rickshaw</p>
+        <p class="text-lg">3001 - Boat</p>
+        <p class="text-lg">9191 - Thar</p>
+        <p class="text-lg">50 - Velociraptor</p>
+        <p class="text-lg">51 - T-rex</p>
+        <p class="text-lg">52 - Spino</p>
+        <p class="text-lg">53 - Brachiosaurus</p>
+        <p class="text-lg">99 - Night Mode</p>
+        <p class="text-lg">54321 - More Traffic Car</p>
+        <p class="text-lg">330 - Jet Pack Mini</p>
+        <p class="text-lg">6677 - JCB</p>
+        <p class="text-lg">333 - Bolero</p>
+        <p class="text-lg">8880 - Hummer</p>
+        <p class="text-lg">4050 - Apache</p>
+        <p class="text-lg">2222 - ATV</p>
+        <p class="text-lg">500 - Audi</p>
+        <p class="text-lg">200 - Bag</p>
+        <p class="text-lg">666 - Banneli TNT</p>
+        <p class="text-lg">4444 - Bugatti Chiron</p>
+        <p class="text-lg">800 - Bugatti v2</p>
+        <p class="text-lg">1111 - Cycle</p>
+        <p class="text-lg">5050 - Dino</p>
+        <p class="text-lg">600 - Dog</p>
+        <p class="text-lg">777 - Ducati Diavel</p>
+        <p class="text-lg">8888 - Duke 1290</p>
+        <p class="text-lg">7777 - Duke 200</p>
+        <p class="text-lg">4215 - Duke</p>
+        <p class="text-lg">2020 - Endeavour</p>
+        <p class="text-lg">8811 - Ferrari</p>
+        <p class="text-lg">606 - Fire Truck</p>
+        <p class="text-lg">1000 - Fortuner</p>
+        <p class="text-lg">00 - Fuel Tank</p>
+        <p class="text-lg">Gas Tank - 5555</p>
+        <p class="text-lg">Ghost Raider Bike - 7000</p>
+        <p class="text-lg">Hayabhusa - 8000</p>
+        <p class="text-lg">Helicopter - 0000</p>
+        <p class="text-lg">Hero Pleasure - 200</p>
+        <p class="text-lg">Horse - 9129</p>
+        <p class="text-lg">Infinity Health - 3000</p>
+        <p class="text-lg">Kawasaki Ninja H2r - 900</p>
+        <p class="text-lg">Koeigness - 1210</p>
+        <p class="text-lg">KTM - 3333</p>
+        <p class="text-lg">Lamborghini - 700</p>
+        <p class="text-lg">Lamborghini v2 - 1001</p>
+        <p class="text-lg">Legendar - 0</p>
+        <p class="text-lg">Monster Truck - 7112</p>
+        <p class="text-lg">Moon Gravity - 12345</p>
+        <p class="text-lg">MoreNPC - 54321</p>
+        <p class="text-lg">MoreTraffic Car - 8123</p>
+        <p class="text-lg">Mustang - 1190</p>
+        <p class="text-lg">New KTM - 99</p>
+        <p class="text-lg">Night Mode - 555</p>
+        <p class="text-lg">Plane - 4000</p>
+        <p class="text-lg">Porsche - 1211</p>
+        <p class="text-lg">Pulsar - 5000</p>
+        <p class="text-lg">Pulsar Rs200 - 2000</p>
+        <p class="text-lg">Rolls Royce - 9999</p>
+        <p class="text-lg">Royal Enfield Bullet - 333</p>
+        <p class="text-lg">Scorpio classic - 444</p>
+        <p class="text-lg">Scorpio s11 - 1120</p>
+        <p class="text-lg">Skyfall - 1112</p>
+        <p class="text-lg">Slow motion - 9000</p>
+        <p class="text-lg">Splendor - 1215</p>
+        <p class="text-lg">Super jump - 6021</p>
+        <p class="text-lg">Super Splendor - 2244</p>
+        <p class="text-lg">Supra - 4040</p>
+        <p class="text-lg">Tank - 300</p>
+        <p class="text-lg">Tarzen - 002</p>
+        <p class="text-lg">Tatto Skin - 9090</p>
+        <p class="text-lg">Thar - 6000</p>
+        <p class="text-lg">Tron Bike - 1212</p>
+        <p class="text-lg">Truck - 01212</p>
+        <p class="text-lg">Truck with trailer - 1216</p>
+        <p class="text-lg">Ultra Super jump - 888</p>
+        <p class="text-lg">Yamaha FZ10 - 0015</p>
+        <p class="text-lg">Yamaha R15 - 999</p>
+        <p class="text-lg">Yamaha vmax - 2030</p>
+        <p class="text-lg">Zombie - 400</p>
+        <p class="text-lg">Zx10r bike - 400</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="px-6 py-10">
+    <h3 class="text-2xl font-semibold mb-6 text-center">Contact Us</h3>
+    <form class="max-w-xl mx-auto space-y-4 bg-gray-800 p-6 rounded-xl shadow-lg">
+      <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" required />
+      <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" required />
+      <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none" required></textarea>
+      <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded text-white font-bold">Send Message</button>
+    </form>
+  </section>
+
+<!-- Social Media Links -->
+<section class="px-8 py-8 text-center bg-purple-700">
+  <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+  <div class="flex justify-center space-x-10">
+    
+    <!-- YouTube -->
+    <a href="https://youtube.com/@mr.beats1k?si=ANYccM1CgK4sV1rP" class="flex items-center space-x-2 text-white hover:text-red-500" target="_blank">
+      <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition duration-300">
+        🎯 Subscribe on YouTube MR.Beats91
+      </button>
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="h-8 w-8" />
+      <span>YouTube</span>
+    </a>
+    
+    <!-- Telegram -->
+    <a href="https://t.me/SGaming1k" class="flex items-center space-x-2 text-white hover:text-blue-400" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" class="h-6 w-6" />
+      <span>Telegram</span>
+    </a>
+    
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black shade-700 py-4 text-center text-sm text-red-400">
+    © 2025 MR.Beats91. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
